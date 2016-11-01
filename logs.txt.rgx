@@ -1,0 +1,1 @@
+{"mId":0, "mRule":null, "mName":"null", "mChildren":[{"mId":0, "mRule":{"mRegex":".*AlertHelper.*"}, "mName":"null", "mChildren":[{"mId":0, "mRule":{"mRegex":".*JoinChannel.*"}, "mName":"null", "mChildren":[{"mId":0, "mRule":{"mRegex":".*Success.*"}, "mName":"null", "mChildren":[]}]}]}]}
