@@ -35,18 +35,6 @@ public class Rule {
         mRule = rule;
     }
 
-    public void setRule(String rule) {
-        mRule = rule;
-    }
-
-    public void setName(String name) {
-        mName = name;
-    }
-
-    public String getName() {
-        return mName;
-    }
-
     public Map<Result, List<Result>> getResults() {
         return mResults;
     }
