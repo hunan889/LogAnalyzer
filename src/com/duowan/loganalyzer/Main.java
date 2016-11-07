@@ -138,7 +138,7 @@ public class Main {
                 }
             }
         } else {
-            rule.execute(new Result(rule, new Result(rule.getParent(), null, fileContent, true), fileContent, true));
+            rule.execute(new Result(rule, null, fileContent, true));
         }
     }
 
@@ -161,18 +161,15 @@ public class Main {
         Map<Result, List<Result>> resultListMap = rule.getResults();
         Set<Result> keys = rule.getResults().keySet();
 
-        int keyPosition = 0;
         for (Result key : keys) {
-            keyPosition++;
             List<Result> results = resultListMap.get(key);
-            System.out.println("result from parent" + key.getPositionInfo());
-            int resultPosition = 0;
-            for (Result result : results) {
-                if (result.mIsMatched) {
-                    System.out.println("result position : " + result.getPositionInfo());
-                    System.out.println(result.mFilterResult);
+            if (results != null && results.size() > 0) {
+                System.out.println("result from parent" + key.getPositionInfo());
+                for (Result result : results) {
+                    if (result.mIsMatched) {
+                        System.out.println(result.mFilterResult);
+                    }
                 }
-                resultPosition++;
             }
         }
 

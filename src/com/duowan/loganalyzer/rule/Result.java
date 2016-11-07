@@ -46,7 +46,6 @@ public class Result {
     }
 
     public String getPositionInfo() {
-
         Rule parentRule = mRule.getParent();
         int ruleIndex = 0;
         if (parentRule != null) {
@@ -55,9 +54,11 @@ public class Result {
 
         String parentResultIndex = mParent == null ? "head" : mParent.getPositionInfo();
 
+        int currentIndex = 0;
+        if (mParent != null) {
+            currentIndex = mRule.getResults().get(mParent).indexOf(this);
+        }
 
-        int currentIndex = mRule.getResults().get(mParent).indexOf(this);
-
-        return String.format("[parent%d#parent_result%s#current_%d]", ruleIndex, parentResultIndex, currentIndex);
+        return String.format("[parent_%d#parent_result_%s#current_%d]", ruleIndex, parentResultIndex, currentIndex);
     }
 }

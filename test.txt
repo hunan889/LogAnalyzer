@@ -1,0 +1,30 @@
+
+a -xx 
+a -xx -xx
+a -xx xxx -xx xxx
+a -xx "xxx xxx xxx" -xx "xxx xxx xxx" xxx 
+
+
+
+a xx xx
+
+
+""     (-\w+)|(\".*?\")|(\w+)
+
+
+
+
+
+(\"(.*?(\\\"))*.*?\")|([\S]+)   //参数 (字符串或者不带-号的串）
+(\"[^\"\n]*?([^\"\n]*?\\\"[^\"\n]*?)*\") 字符串带引号转义
+
+"a adb \"bc\"dccccccccc"""
+
+
+"abc" "bcd" " -adb push /mnt/sdcard/"
+
+adb add 123 456 d3
+
+
+
+adb push c:/data/anr /mnt/sdcard/ "dddd" -aaaa
